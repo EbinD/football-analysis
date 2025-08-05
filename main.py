@@ -83,16 +83,3 @@ raw_df = pd.read_csv("raw_player.csv")
 # 3. Count non-null columns (i.e. useful columns)
 # non_null_cols = raw_df.columns[raw_df.notnull().any()].tolist()
 # print(f"\n✅ Columns with at least some data: {len(non_null_cols)}")
-
-
-def print_top_level(path):
-    print(f"{os.path.basename(path)}/")
-    for item in os.listdir(path):
-        item_path = os.path.join(path, item)
-        if os.path.isdir(item_path):
-            print(f"    {item}/")
-        else:
-            print(f"    {item}")
-
-
-print_top_level("C:/Users/solly/Desktop/football-analysis")
