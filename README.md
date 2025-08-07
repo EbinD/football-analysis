@@ -1,30 +1,59 @@
-# Football Player Stats – 2018/19
+# ⚽ Football Player Goals Prediction
 
-This project analyzes player performance data from the 2018/19 football season.  
-It covers:
+A machine learning web app that predicts total goals scored by a football player using career stats like appearances, minutes, assists, and position.
 
-- ✅ Data cleaning
-- 📊 Exploratory Data Analysis (EDA)
-- 🧠 Key insights on goals, positions, and efficiency
+---
 
-## Project Structure
+## 🚀 App Demo
 
-football-analysis/
-    .git/
-    .gitignore
-    .ipynb_checkpoints/
-    main.py
-    notebooks/
-    players.csv
-    player_clean.csv
-    player_clean_step1.csv
-    raw_player.csv
-    README.md
-    venv/
+🔗 [Live App on Streamlit](https://football-analysis-jfdzw8bllcprmno2puervg.streamlit.app/)
 
+---
 
-## Tools Used
+## 📁 Project Structure
 
-- Python 3.13
-- Pandas
-- Matplotlib / Seaborn
+- `app.py`: Streamlit frontend for user inputs and prediction
+- `model/`: Contains the trained Random Forest model (`.pkl`)
+- `data/`: Raw and cleaned player statistics
+- `notebooks/`: EDA, feature engineering, and modeling notebooks
+
+---
+
+## 📊 Data Overview
+
+- Source: [Footstats 2018/19 Dataset](#)
+- Players: 570
+- Features: Appearances, goals, assists, minutes, nationality, position, etc.
+
+---
+
+## 📈 Model Details
+
+- Type: Random Forest Regressor
+- Input features: 12 engineered stats
+- Output: Predicted total career goals
+
+---
+
+## 🛠 Features
+
+- Cleaned & engineered dataset
+- Exploratory Data Analysis (EDA)
+- Random Forest training & evaluation
+- Feature importance analysis
+- Web app with interactive input form
+- Deployed using Streamlit Cloud
+
+---
+
+## 🧠 Example Use
+
+> *"If a midfielder played 1500 minutes with 5 assists and 20 appearances, how many goals would they likely score?"*
+
+---
+
+## 📌 How to Run Locally
+
+```bash
+pip install -r requirements.txt
+streamlit run app.py
